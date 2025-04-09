@@ -1,221 +1,94 @@
-// console.log("Hello!");
+// DOM-Document Object Model
+// DOM is used to manipulate the HTML elements in a webpage
 
-// let, var, const
+// Selecting
 
-// let a = "I love You";
-// let b=Number(a)
+// Id
 
-// if (isNaN(b)) {
-//   console.log("Ok");
-// } else {
-//   console.log("Not Ok");
-// }
+// .getElementById("Id name")
 
-// Truthy Values: true, numbers except 0, non-empty strings, objects, arrays
-// Falsy Values: false, 0, "", null, undefined, NaN.
+// let h2 = document.getElementById("head2");
 
-// BODMOS
+// console.log(h2);
 
-// Function Declarations
+// Class name
 
-// const printName = (name, age, func) => {
-//   console.log("The Name Is:", name);
-//   console.log("Age Is:", age);
-//   func();
-// };
+// let h2 = document.getElementsByClassName("head2");
 
-// printName("Tharick", 22, () => {
-//   console.log("Small inner func");
+// console.log(h2);
+
+// tag name
+
+// let h2 = document.getElementsByTagName("h2");
+
+// console.log(h2);
+
+// Query Selector
+
+// let element = document.querySelector(".head2");
+
+// console.log(element);
+
+// Query selector all
+
+// let elements = document.querySelectorAll("h2");
+// console.log(elements);
+
+// Changing Contents
+
+// console.log(h2.textContent);
+
+// h2.textContent = "Good Bad Ugly!";
+// console.log(h2.textContent);
+// console.log(h2.innerHTML);
+
+// h2.innerHTML = "<p>Good Bad Ugly!</p>";
+
+// Styling
+
+// h2.style.backgroundColor = "red";
+// h2.style.padding = "20px";
+
+// Class name manipulation
+
+// console.log(h2.classList);
+
+// h2.classList.add("try");
+// h2.classList.remove("head2")
+
+// h2.classList.toggle("head2");
+
+// Attribute Manipulation
+
+// const h2 = document.querySelector("#head2");
+
+// console.log(h2.getAttribute("id"));
+// h2.setAttribute("id","head")
+
+// document.querySelector("a").setAttribute("href", "https://www.google.com");
+
+// Removing
+
+// h2.remove();
+
+// Creating Elements
+// const div = document.createElement("div");
+// div.textContent = "Something!";
+// div.classList.add("Hello");
+// console.log(div);
+
+// document.querySelector("body").appendChild(div);
+
+// Event Listeners
+
+// const btn = document.querySelector("button");
+// const h2 = document.querySelector("h2");
+// btn.addEventListener("click", () => {
+//   h2.textContent = "Clicked";
+//   h2.style.color = "aqua";
 // });
 
-// [], {}
-
-// Array
-
-// let arr1 = [
-//   3,
-//   34,
-//   32,
-//   34,
-//   324,
-//   5,
-//   342,
-//   5,
-//   32,
-//   3,
-//   32,
-//   3,
-//   324,
-//   3,
-//   "hgdufgu",
-//   true,
-//   () => {
-//     console.log("Hi");
-//   },
-// ];
-
-// arr1[arr1.length - 1]();
-
-// Objects
-
-// {key:value,.....}
-
-// let person1 = {
-//   name: "Tharick",
-//   age: 22,
-//   isMarried: true,
-//   spouse: "Thamanna",
-//   favFoods: ["Grill", "Biriyani", { mostFav: "Curd rice", leastFav: "Upma" }],
-//   printHello: () => {
-//     console.log("Hello Guys!");
-//   },
+// const model = () => {
+//   h2.textContent = "Clicked";
+//   h2.style.color = "aqua";
 // };
-
-// console.log(person1.age);
-
-// . method
-// ["key"]
-
-// obj.result.posts[0].userId.email
-
-// parsing
-
-// Array Methods
-
-// push
-// pop
-// unshift
-// shift
-// sort
-// splice
-
-// arr.splice(6, 1, 7.1, 7.2);
-
-// console.log(arr);
-
-// slice
-// map
-// filter
-// reduce
-
-// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-// let ans = arr.map((ele, ind) => {
-//   return ind + ele;
-// });
-
-// console.log(ans);
-
-// let nameList = [
-//   { age: 22, canVote: false },
-//   { age: 2, canVote: false },
-//   { age: 12, canVote: false },
-//   { age: 32, canVote: false },
-//   { age: 42, canVote: false },
-//   { age: 21, canVote: false },
-//   { age: 18, canVote: false },
-//   { age: 17, canVote: false },
-//   { age: 25, canVote: false },
-//   { age: 70, canVote: false },
-//   { age: 1, canVote: false },
-// ];
-
-//above 20
-
-// [{}, {}, {}];
-
-// let correctedNameList = nameList.map((ele, ind) => {
-//   if (ele.age >= 18) {
-//     return { age: ele.age, canVote: true };
-//   }
-//   return ele;
-// });
-
-// console.log(correctedNameList);
-
-// Filter
-
-// let arr = [1, 2, 3, 4, 5, 6, 5, 7, 89, 3];
-
-// []
-
-// 1-->(1,0)
-
-// let ans = arr.filter((ele, ind) => {
-//   return ind;
-// });
-
-// console.log(ans);
-
-// Reduce
-// number
-
-// let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // accumulator
-
-//55
-
-// Round 1-(0,1,0)==> 1
-// Round 2-(1,2,1)==> 3
-// Round
-// Round
-// Round
-// Round
-// Round
-// Round
-// Round
-// Round 10-(45,10,9)==>55
-
-// let ans = arr1.reduce((acc, ele, ind) => {
-//   return acc / ele;
-// }, 0);
-
-// console.log(ans);
-
-// Spread(...)
-
-// let arr=[324,34,324,54,3,4,34]
-
-// let arr1=[1,2,3,...arr]
-
-// console.log(arr1);
-
-// let obj = {
-//   name: "Tharick",
-//   age: 22,
-//   isMarried: true,
-//   spouse: "Thamanna",
-//   favFoods: ["Grill", "Biriyani", { mostFav: "Curd rice", leastFav: "Upma" }],
-//   printHello: () => {
-//     console.log("Hello Guys!");
-//   },
-// };
-
-// let obj1 = {
-//   id: 1,
-//   ...obj.favFoods[2],
-// };
-
-// console.log(obj1);
-
-// Destructuring
-
-// let obj = {
-//   name: "Tharick",
-//   age: 22,
-//   isMarried: true,
-//   spouse: "Thamanna",
-//   favFoods: ["Grill", "Biriyani", { mostFav: "Curd rice", leastFav: "Upma" }],
-//   printHello: () => {
-//     console.log("Hello Guys!");
-//   },
-// };
-
-// const { name, age, spouse, favFoods} = obj;
-
-// console.log(age);
-// console.log(name);
-// console.log(favFoods);
-
-// const { spouse, favFoods, printHello, ...gokul } = obj;
-
-// console.log(gokul);
