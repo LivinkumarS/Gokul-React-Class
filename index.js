@@ -92,3 +92,21 @@
 //   h2.textContent = "Clicked";
 //   h2.style.color = "aqua";
 // };
+
+// DOM traversing
+
+// let h2 = document.querySelector("h2");
+// let body = document.querySelector("body");
+
+// .parentElement
+// .nextElementSibling
+
+// console.log(body.children);
+// console.log(body.firstElementChild);
+// console.log(body.lastElementChild);
+
+
+// console.log(h2.nextElementSibling.nextElementSibling.parentElement.parentElement);
+
+
+
