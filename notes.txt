@@ -1,0 +1,24 @@
+React
+-------
+React is an open-source JS library. used to build SPA(Single Page Applications).
+It allows to create reusable components.
+
+created by Facebook
+
+Why Use React?
+---------------
+Fast and efficient (Virtual DOM) updates.
+reusable components
+It has large community support.
+
+node---> JS runtime.
+frontend---->backend(node)
+NPM---> Node Package Manager.
+npm install "Package name".
+
+Create React app 
+-----------------
+
+npm create vite@latest
+npm install 
+npm run dev
