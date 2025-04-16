@@ -22,3 +22,26 @@ Create React app
 npm create vite@latest
 npm install 
 npm run dev
+
+
+
+JSX---> JavaSCript XML
+XML--> Extensible Markup Language.
+
+JSX is a syntax extensionfor JS, used with react. it allows you to write HTML code innside JS.
+
+const element="<h1>Heading Tag</h1>"
+(in js it is not possible.)
+
+Rules of JSX.
+-------------
+1) JSX function can return only a single parent element
+2) use {} to embed any JavaSCript expression into HTML.
+3) JSX uses camelCase for HTML attributes (ex:className, onClick)  style==> {backgroundColor:"red"}
+
+Components and Props
+-------------------------
+
+Components are reusable of UI. Props are used to pass data into components.
+
+jsx functional component---> js function (returns HTML element)
