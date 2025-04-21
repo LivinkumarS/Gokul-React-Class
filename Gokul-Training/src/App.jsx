@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 
 export default function App() {
-  // function printHi(name) {
-  //   console.log("Hi " + name);
-  // }
+  const [doLove, setDoLove] = useState(true);
 
   return (
     <div>
+      {doLove ? <h1>I love to code</h1> : <h1>I hate to code</h1>}
       <button
         onClick={() => {
-          printHi("Tharick");
+          setDoLove((prev)=>{return !prev});
         }}
       >
         Click me!
