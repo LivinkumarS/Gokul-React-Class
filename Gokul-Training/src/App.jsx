@@ -5,7 +5,7 @@ export default function App() {
 
   return (
     <div>
-      {doLove ? <h1>I love to code</h1> : <h1>I hate to code</h1>}
+      {doLove && <h1>I would love to code</h1>}
       <button
         onClick={() => {
           setDoLove((prev)=>{return !prev});

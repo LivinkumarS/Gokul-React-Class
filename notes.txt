@@ -85,3 +85,5 @@ Conditional Rendereing
 Using Ternary Operator ----> condition? command1 : command2
 
 {doLove ? <h1>I love to code</h1> : <h1>I hate to code</h1>}
+
+Using AND Operator ----> condition && component.
