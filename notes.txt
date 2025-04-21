@@ -45,3 +45,41 @@ Components and Props
 Components are reusable of UI. Props are used to pass data into components.
 
 jsx functional component---> js function (returns HTML element)
+
+
+States and useState Hook
+----------------------------
+
+State: It is a built-in object that allows components to hold dynamic  data that affects ho the conponent renders and behaves.
+
+useState: const [state, setState]=useState(intValue)
+
+whenever the state is created or changed, the component will re-render
+
+
+onClick={() => {
+          setName("Gokul");
+        }}
+
+
+Event Handling In react
+------------------------
+React uses camelCase for event names and passes a function.
+rules: should not invoke the function. just mention it's name instead.
+
+onClick={() => {
+          setName("Gokul");
+        }}
+
+Inline Handler---> onClick={() => {
+          console.log("Hi")
+        }}
+
+Seperate Handler--->onClick={() => {
+          printHi("Tharick");
+        }}
+
+Conditional Rendereing
+-----------------------
+
+Using Ternary Operator ----> condition? command1 : command2

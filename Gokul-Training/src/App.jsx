@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 
 export default function App() {
-  const [name, setName] = useState("Hari"); //create
-
-  function changeName(){
-    setName((prev)=>{
-      return prev+" kumar"
-    })
-  }
+  // function printHi(name) {
+  //   console.log("Hi " + name);
+  // }
 
   return (
     <div>
-      <h1>The name is {name}</h1>
       <button
-        onClick={()=>{changeName()}}
+        onClick={() => {
+          printHi("Tharick");
+        }}
       >
-        Clickme
+        Click me!
       </button>
     </div>
   );
