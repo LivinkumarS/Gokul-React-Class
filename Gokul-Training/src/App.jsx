@@ -1,32 +1,39 @@
 import React, { useState } from "react";
 
 export default function App() {
-  const [movieList, setMovieList] = useState([
-    "Theri",
-    "Kaththi",
-    "Sachin",
-    "Ghillie",
-    "Mersal",
+  const [toDoList, SetToDoList] = useState([
+    "Workout",
+    "Study",
+    "Sleep",
+    "Run",
+    "Walk",
   ]);
+
+  const delElement = (ind) => {
+    SetToDoList((prev) => {
+      return prev.filter((ele, index) => {
+        return index !== ind;
+      });
+    });
+  };
 
   return (
     <div>
-      {movieList.map((ele, ind) => {
-        return <h1 key={ind}>{ele}</h1>;
+      <h1>Task List</h1>
+      {toDoList.map((ele, ind) => {
+        return (
+          <h3 key={ind}>
+            {ele}{" "}
+            <button
+              onClick={() => {
+                delElement(ind);
+              }}
+            >
+              del
+            </button>
+          </h3>
+        );
       })}
-
-      <button
-        onClick={() => {
-          setMovieList((prev) => {
-            let temp = prev;
-            temp.pop();
-
-            return [...temp];
-          });
-        }}
-      >
-        clear
-      </button>
     </div>
   );
 }
