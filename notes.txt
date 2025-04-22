@@ -61,6 +61,12 @@ onClick={() => {
           setName("Gokul");
         }}
 
+Accessing Previous value: 
+
+setNumber((prev) => {
+            return prev + 1;
+          });
+
 
 Event Handling In react
 ------------------------
@@ -87,3 +93,21 @@ Using Ternary Operator ----> condition? command1 : command2
 {doLove ? <h1>I love to code</h1> : <h1>I hate to code</h1>}
 
 Using AND Operator ----> condition && component.
+
+
+Rendering List
+----------------
+
+[1,2,3,4,5] map 
+
+<h1>Theri</h1>
+<h1>2</h1>
+<h1>3</h1>
+<h1>4</h1>
+<h1>5</h1>
+
+
+Used to create a list of components using map dynamically.
+
+Unique Keys---> the key prop helps react identify the item. that should be unique and stable.
+
