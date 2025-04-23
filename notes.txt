@@ -111,3 +111,20 @@ Used to create a list of components using map dynamically.
 
 Unique Keys---> the key prop helps react identify the item. that should be unique and stable.
 
+
+Controlled Inputs
+------------------
+
+React controls the inputs via state(useState).
+1)creating state 2)Input-->onchange, value
+
+Handling multiple inputs 
+--------------------------
+
+create single state object.
+
+let a="keyone"
+
+{
+  [a]: a
+}

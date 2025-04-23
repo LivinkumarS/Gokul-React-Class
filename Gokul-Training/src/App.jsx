@@ -1,39 +1,53 @@
 import React, { useState } from "react";
 
 export default function App() {
-  const [toDoList, SetToDoList] = useState([
-    "Workout",
-    "Study",
-    "Sleep",
-    "Run",
-    "Walk",
-  ]);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+  });
 
-  const delElement = (ind) => {
-    SetToDoList((prev) => {
-      return prev.filter((ele, index) => {
-        return index !== ind;
-      });
+  const changeData = (e) => {
+    setFormData((prev) => {
+      return { ...prev, [e.target.id]: e.target.value };
     });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+
+    //API Transfer
+
   };
 
   return (
     <div>
-      <h1>Task List</h1>
-      {toDoList.map((ele, ind) => {
-        return (
-          <h3 key={ind}>
-            {ele}{" "}
-            <button
-              onClick={() => {
-                delElement(ind);
-              }}
-            >
-              del
-            </button>
-          </h3>
-        );
-      })}
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Name"
+          id="name"
+          value={formData.name}
+          onChange={changeData}
+        />
+        <input
+          type="email"
+          placeholder="Email id"
+          id="email"
+          value={formData.email}
+          onChange={changeData}
+        />
+        <input
+          type="number"
+          placeholder="Mobile Number"
+          id="mobile"
+          value={formData.mobile}
+          onChange={changeData}
+        />
+
+        <button>Submit</button>
+      </form>
     </div>
   );
 }
