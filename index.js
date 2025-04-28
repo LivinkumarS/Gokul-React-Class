@@ -1,7 +1,40 @@
-function add(a,b) {
+// console.log("Process Start");
 
-  return a+b;
-}
+// setTimeout(() => {
+//   console.log("Proceed!");
+// }, 5000);
 
-let ans = add(11,10);
-console.log(ans);
+// console.log("Process End");
+
+const promise = new Promise((resolve, reject) => {
+  const success = false;
+  if (success) {
+    resolve("Promise fulfilled");
+  } else {
+    reject("Failed");
+  }
+});
+
+console.log("Started");
+
+// promise
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((message) => {
+//     console.log(message);
+//   });
+
+const promFunc = async () => {
+  try {
+    const value =  promise;
+    console.log(value);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+promFunc();
+
+console.log("Finished");
+await

@@ -1,3 +1,23 @@
+Asynchronous JS
+-----------------
+
+JS--->Single Threaded programming language.
+
+order---> shipping --> delivery
+
+setTimeout(()=>{},time).
+
+fetch--->  used to get data from API.
+
+
+Promise
+--------
+
+it represents the future value.
+
+promise.then((resolved value)=>{}).catch((rejected)=>{})
+
+
 React
 -------
 React is an open-source JS library. used to build SPA(Single Page Applications).
@@ -128,3 +148,4 @@ let a="keyone"
 {
   [a]: a
 }
+
