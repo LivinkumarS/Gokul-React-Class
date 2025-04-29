@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Student from "./Student";
 
 export default function App() {
@@ -8,9 +8,13 @@ export default function App() {
     { name: "Livin", isPresent: false },
   ]);
 
+  useEffect(() => {
+    console.log("From useEffect");
+    // setStudents([]);
+  }, [students]);
+
   return (
     <div>
-
       <button>Present</button>
       <button>Absent</button>
       <button>All</button>
@@ -18,6 +22,14 @@ export default function App() {
       {students.map((ele, ind) => {
         return <Student Name={ele.name} IsPresent={ele.isPresent} />;
       })}
+
+      <button
+        onClick={() => {
+          setStudents([]);
+        }}
+      >
+        click
+      </button>
     </div>
   );
 }
