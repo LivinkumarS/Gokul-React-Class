@@ -1,49 +1,32 @@
 import React, { useEffect, useState } from "react";
-import Student from "./Student";
 
 export default function App() {
-  const [students, setStudents] = useState([
-    { name: "Gokul", isPresent: true },
-    { name: "Tharick", isPresent: true },
-    { name: "Livin", isPresent: false },
-  ]);
+  const [post, setPost] = useState([]);
+  
 
-  const [keyword, setKeyWord] = useState("all");
-  const [filteredList, setFilteredList] = useState([]);
+  const fetchPost = async () => {
+    try {
+      const result = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const postRes = await result.json();
+      setPost(postRes);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
-    
-    if(keyword==="all"){
-
-
-    }
-    else if(keyword==="present"){
-
-
-    }else{
-
-      
-    }
-
-  }, [keyword]);
+    fetchPost();
+  }, []);
 
   return (
     <div>
-      <button>Present</button>
-      <button>Absent</button>
-      <button>All</button>
-
-      {students.map((ele, ind) => {
-        return <Student Name={ele.name} IsPresent={ele.isPresent} />;
-      })}
-
-      <button
-        onClick={() => {
-          setStudents([]);
-        }}
-      >
-        click
-      </button>
+      {post.map((ele, ind) => (
+        <div key={ind}>
+          <h2>Titile:{ele.title}</h2>
+          <p>{ele.body}</p>
+          <hr />
+        </div>
+      ))}
     </div>
   );
 }

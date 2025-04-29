@@ -97,6 +97,12 @@ useEffect(callBckFunc, [])
 [variable]--> run when variable changes.
 
 
+GET, POST, PUT, PATCH, DELETE.
+
+JSON--->JavaScript Object Notation "{"key" : "value"}" {key:value}
+obj>json---> JSON.stringify(Objname)
+json>obj---> JSON.parse(jsonName)
+
 Event Handling In react
 ------------------------
 React uses camelCase for event names and passes a function.
