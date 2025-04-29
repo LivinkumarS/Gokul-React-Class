@@ -8,10 +8,24 @@ export default function App() {
     { name: "Livin", isPresent: false },
   ]);
 
+  const [keyword, setKeyWord] = useState("all");
+  const [filteredList, setFilteredList] = useState([]);
+
   useEffect(() => {
-    console.log("From useEffect");
-    // setStudents([]);
-  }, [students]);
+    
+    if(keyword==="all"){
+
+
+    }
+    else if(keyword==="present"){
+
+
+    }else{
+
+      
+    }
+
+  }, [keyword]);
 
   return (
     <div>
