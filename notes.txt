@@ -164,3 +164,10 @@ let a="keyone"
   [a]: a
 }
 
+
+
+Props Drilling
+-----------------
+The process of passing data(props) from parent component to deeply nested child components.
+
+disadvantages---> Hard to read, hard to maintain
