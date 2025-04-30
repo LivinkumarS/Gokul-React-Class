@@ -171,3 +171,19 @@ Props Drilling
 The process of passing data(props) from parent component to deeply nested child components.
 
 disadvantages---> Hard to read, hard to maintain
+
+useContext(Hook)
+-----------------
+Avoids Props drilling. maintains common state for all the nested components.
+
+step1
+------
+create context----> createContext()
+
+step2
+-------
+provide context ---> <context.provider value{{}}> child </context.provider>
+
+step 3
+-------
+consume the context ----> useContext()
