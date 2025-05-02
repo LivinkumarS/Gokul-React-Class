@@ -187,3 +187,14 @@ provide context ---> <context.provider value{{}}> child </context.provider>
 step 3
 -------
 consume the context ----> useContext()
+
+
+React Router DOM
+-----------------
+It is a standard library for routing in react.
+
+step 1---> install package called "react-router-dom"
+step 2--> wrap the entire application in BrowserRouter Element from React-Router-dom
+step 3---> Routes and Route elements to create routes.
+
+to navigate to the particular path---> Link tag from React-router-dom
